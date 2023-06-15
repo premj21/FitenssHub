@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+#load {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background: white url(/images/Spin-Preloader-1.gif) no-repeat center;
+  z-index: 9999999;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+.home {
+  height: 100vh;
+  background-size: cover;
+  padding: 15px;
+  -webkit-display: flex;
+  display: flex;
+  position: relative;
+}
+.home .go-down {
+  position: absolute;
+  bottom: 50px;
+  width: 26px;
+  height: 40px;
+  border: 1px solid #ffffff;
+  display: block;
+  border-radius: 4px;
+  text-align: center;
+  left: 50%;
+  margin-left: -13px;
+}
+.home .go-down .fa {
+  color: #ffffff;
+  -webkit-animation: goDown 1s ease infinite;
+  animation: goDown 1s ease infinite;
+}
+@-webkit-keyframes goDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+@keyframes goDown {
+  0% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+.home .container {
+  -webkit-display: flex;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.home h1 {
+  color: #ffffff;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.home h1 span {
+  color: rgb(175, 156, 175);
+}
+
+/*About section*/
+
+.about {
+  padding: 80px 0px;
+  background-color: #ffffff;
+}
+.about .container {
+  display: flex;
+  height: inherit;
+  justify-content: center;
+}
+
+.about .content {
+  -webkit-display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.about .content .box {
+  width: 400px;
+  padding: 15px;
+  border-radius: 20px;
+}
+.about .content .box .inner {
+  background-color: #222222;
+  border-radius: 20px;
+}
+.about .content .box:nth-child(2) .inner {
+  background-color: black;
+  border-radius: 20px;
+}
+.about .content .box .inner .img img {
+  width: 100%;
+  border-radius: 20px;
+}
+.about .content .box .inner .text {
+  padding: 30px;
+  border-radius: 20px;
+}
+
+.about .content .box .inner .text h4 {
+  font-size: 20px;
+  margin: 0;
+  padding: 0px 0px 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-transform: capitalize;
+  text-align: center;
+}
+.about .content .box .inner .text p {
+  font-size: 15px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  height: auto;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+.main-banner {
+  position: relative;
+}
+
+#bg-video {
+  min-width: 100%;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#bg-video::-webkit-media-controls {
+  display: none !important;
+}
+
+.video-overlay {
+  position: absolute;
+  background-color: rgba(35, 45, 57, 0.8);
+  top: 0;
+  left: 0;
+  bottom: 4px;
+  width: 100%;
+}
+
+.main-banner .caption {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main-banner .caption h6 {
+  margin-top: 0px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.main-banner .caption h2 {
+  margin-top: 30px;
+  margin-bottom: 25px;
+  font-size: 84px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.main-banner .caption h2 em {
+  font-style: normal;
+  color: #ed563b;
+  font-weight: 900;
+}
+
+.inner {
+  border: 2px solid black;
+  box-shadow: 5px solid white;
+}
+
+.inner:hover {
+  transform: scale(1.009);
+  box-shadow: 2px 2px 2px rgb(191, 200, 109);
+  cursor: pointer;
+  border: 2px solid black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .about .content .box {
+    width: 350px;
+    padding: 15px;
+    border-radius: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .main-banner .caption h2 {
+    font-size: 48px;
+    width: 300px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+h2.text-start{
+    text-align: center;
+    margin-left: 30%;
+}
+
+h3{
+    border: 3px solid black;
+    border-radius: 55%;
+    background-color: rgb(40,43,40);
+    color: white;
+    margin-left: 36rem;
+    text-align: center;
+}
